@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #AAAAAA;  /* Cor de fundo do body */
+}
+
+.topo {
+  background-color: #AAAAAA;
+  background-image: url('imagem.fundo.avif') ; /* Imagem de fundo para o topo */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 40px 10px;
+  color: #E5E5E5; /* Cor do texto */
+}
+
+.topo h1 {
+  font-size: 28px; 
+  margin-bottom: 10px;
+}
+
+.topo p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.caixa-branca {
+  background: #fff;
+  width: 95%;
+  max-width: 600px;
+  margin: -40px auto 40px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contatos {
+  text-align: center;
+}
+
+.contatos h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.icones-contato {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;  /* Espaço entre os ícones */
+  font-size: 14px;
+  align-items: center;
+}
+
+.icones-contato a {
+  text-decoration: none;
+  color: #d62828;
+  transition: transform 0.2s ease;
+}
+
+.icones-contato a:hover {
+  transform: scale(1.2);
+}
+
+.icone-social {
+  width: 32px;
+  height: 32px;
+}
+
+.telefone-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #333333;
+  max-width: 200px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.endereco {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.endereco p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.endereco button {
+  margin-top: 8px;
+  background-color: #d62828;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.formulario {
+  margin-top: 20px;
+}
+
+.formulario h2 {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.duplo {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os campos de input */
+}
+
+.duplo input {
+  flex: 1;  /* Garante que os inputs ocupem o mesmo espaço */
+}
+
+button[type="submit"] {
+  background-color: #d62828;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .duplo {
+    flex-direction: column; /* Para telas menores, os inputs ficam em coluna */
+  }
+
+  .telefone-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+
+.rodape {
+  background-color: #00a14e;
+  color: #f2f2f2;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 14px;
+}

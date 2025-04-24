@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato - Dona Pizza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+  <!-- Header: Título e descrição inicial -->
+  <header class="topo"> 
+    <h1>ENTRE EM CONTATO</h1>
+  </header>
+
+ <!-- Main: Conteúdo principal -->
+  <main class="caixa-branca">
+    <section class="contatos">
+      <h2>Fale conosco:</h2>
+
+       <!-- Ícones de contato com links para redes sociais e telefone -->
+      <div class="icones-contato">
+        <a href="https://www.instagram.com/donapizzassa/" target="_blank" title="Instagram">
+          <img src="Instagram-PNG.png" alt="Instagram" class="icone-social">
+        </a>
+        <a href="https://www.facebook.com/donapizza.com.br/?locale=pt_BR" target="_blank" title="Facebook">
+          <img src="icone.facebook.png" alt="Facebook" class="icone-social">
+        </a>
+        <a href="https://wa.me/5571987483645?text=Ol%C3%A1%20Dona%20Pizza!%20Quero%20fazer%20um%20pedido%20delicioso%20agora%20mesmo!%20%F0%9F%8D%95%F0%9F%98%8B" target="_blank" title="WhatsApp">
+          <img src="iconewhatsapp.jpg" alt="WhatsApp" class="icone-social">
+        </a>
+        <div class="telefone-item" title="Telefones">
+          <img src="icone.telefone.png" alt="Telefone" class="icone-social">
+          <span>(71) 98748-3645<br>(71) 3023-0596<br>(71) 3561-8856</span>
+        </div>
+      </div>
+    </section>
+
+     <!-- Endereço da pizzaria -->
+    <section class="endereco">
+      <p><strong>Rua Xingu, 180 - STIEP, Salvador - BA, 41770-130, Brasil</strong></p>
+      <a href="https://maps.app.goo.gl/PQ9iNbCRVryiMi9w7" target="_blank">
+        <button>Ver no Mapa</button>
+      </a>
+    </section>
+
+        <!-- Formulário de feedback -->
+    <section class="formulario">
+      <h2>TEM UM FEEDBACK?</h2>
+      <form id="feedbackForm">
+        <div class="duplo">
+          <input type="text" id="nome" placeholder="Primeiro Nome" required>
+          <input type="text" id="sobrenome" placeholder="Último Nome" required>
+        </div>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <div class="duplo">
+          <input type="text" id="assunto" placeholder="Assunto" required>
+          <input type="text" id="pedido" placeholder="Nº do Pedido (5 dígitos)" pattern="\d{5}" maxlength="5" title="Digite 5 números">
+        </div>
+        <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+        <button type="submit">ENVIAR MENSAGEM</button>
+      </form>
+    </section>
+  </main>
+
+ 
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const sobrenome = document.getElementById('sobrenome').value;
+      const email = document.getElementById('email').value;
+      const assunto = document.getElementById('assunto').value;
+      const pedido = document.getElementById('pedido').value;
+      const mensagem = document.getElementById('mensagem').value;
+
+      const texto = `Olá Dona Pizza!%0ARecebi um feedback:%0A🧑 Nome: ${nome} ${sobrenome}%0A📧 Email: ${email}%0A📝 Assunto: ${assunto}%0A📦 Pedido: ${pedido}%0A💬 Mensagem: ${mensagem}`;
+      const url = `https://wa.me/5571987483645?text=${texto}`;
+
+      window.open(url, '_blank');
+    });
+  </script>
+<footer class="rodape">
+  <div class="rodape-conteudo">
+    <p>&copy; 2025 Dona Pizza - Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
